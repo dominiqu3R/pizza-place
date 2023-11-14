@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Place</title>
+    <style>body {
+  margin: 0;
+  padding: 0;
+}
+div.container {
+  height: 100%;
+  width: 80vw;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+div.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img#banner-logo {
+  width: 80vw;
+  vertical-align: bottom;
+}
+
+a {
+  line-height: 45px;
+  text-align: center;
+  color: white;
+}
+a:hover {
+  color: yellow;
+}
+#nav-list {
+  background: linear-gradient(to bottom, black 1%, maroon, rgb(179, 20, 25));
+  /*   width: px; */
+  height: 45px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+li {
+  float: left;
+}
+li a {
+  color: white;
+  padding: 10px;
+  margin: 15px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+input#name-input::placeholder {
+  color: red;
+}
+
+input#zipcode-input::placeholder {
+  color: red;
+}
+input#phone-input::placeholder {
+  color: red;
+}
+h1 {
+  color: maroon;
+  font-size: 3rem;
+  font-family: sans-serif, "Arial";
+  margin-left: 25px;
+}
+#survey-text {
+  margin: 25px;
+  font-size: 1.2rem;
+}
+
+#customer-information-label {
+  background-color: maroon;
+  color: white;
+  width: 45%;
+  text-align: center;
+  padding: 3px 0px;
+  margin-top: 0;
+}
+
+#customer-experience-label {
+  background-color: maroon;
+  color: white;
+  width: 75%;
+  text-align: center;
+  padding: 3px 0px;
+  margin-top: 0;
+}
+.customerInfo {
+  height: 475px;
+  width: 42%;
+  background-color: beige;
+  display: inline-block;
+  margin: 15px auto;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+#info-box-left {
+  margin-left: 2vw;
+  float: left;
+  padding: 15px;
+}
+#info-box-right {
+  margin-right: 2vw;
+  float: right;
+  padding: 15px;
+}
+label {
+  float: left;
+  width: 45%;
+  line-height: 1rem;
+}
+input {
+  float: right;
+  width: 50%;
+  height: 1rem;
+}
+
+label,
+input {
+  box-sizing: border-box;
+}
+
+.line-info {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 1rem;
+}
+.radio-div {
+  margin-bottom: 5px;
+  width: 100%;
+  height: 3.5rem;
+  /*   background-color: green; */
+  padding: 5px;
+  box-sizing: border-box;
+}
+#referral-div {
+  height: 6rem;
+}
+
+select {
+  float: right;
+  width: 50%;
+}
+
+#email-list-check {
+  float: left;
+  width: 10%;
+  height: 1rem;
+  margin-top: 15px;
+}
+
+#email-list {
+  float: right;
+  width: 85%;
+  margin-top: 15px;
+}
+
+.yes-no-border {
+  height: 35px;
+  width: 45%;
+  border: 1px solid black;
+  margin-top: 5px;
+  float: right;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.radio-label {
+  float: none;
+  margin: 0;
+  padding-right: 10px;
+  /*   background-color: orange; */
+  line-height: 2rem;
+}
+
+.radio-input {
+  float: none;
+  margin: 0;
+  width: 25px;
+}
+
+textarea {
+  margin: auto;
+}
+#exp-answer {
+  margin-top: 25px;
+}
+.submit-buttons {
+  font-size: 1.25rem;
+  display: inline-block;
+  height: 1.75rem;
+  line-height: 1.75rem;
+}
+
+#buttons-container {
+  width: 50%;
+  margin: auto;
+}
+
+footer {
+  color: white;
+  width: 80vw;
+  height: 250px;
+  background: linear-gradient(to top, black 1%, maroon, rgb(179, 20, 25));
+  margin: auto;
+}
+
+h3 {
+  color: yellow;
+  margin-left: 6%;
+}
+
+.fl {
+  box-sizing: border-box;
+}
+
+#footer-container {
+  display: inline-block;
+  width: 80vw;
+  margin: auto;
+  height: 250px;
+}
+
+.col {
+  width: 20%;
+  box-sizing: border-box;
+  dislay: inline;
+}
+
+a.fl {
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  margin-left: 6%;
+  line-height: 1.5rem;
+}
+
+a.fl:hover {
+  color: white;
+  text-decoration: underline;
+}</style>
+</head>
+<body>
+    <div class="container">
+
+  <!--   <img id="test-image" src="" width=100 height=100> -->
+  <img id="banner-logo" src="">
+  <div id="nav-list">
+    <ul>
+      <li><a href="">home</a></li>
+      <li><a href="">menu</a></li>
+      <li><a href="">directions</a></li>
+      <li><a href="">coupons</a></li>
+      <li><a href="">orders</a></li>
+      <li><a href="">catering</a></li>
+      <li><a href="">reviews</a></li>
+
+  </div>
+
+  <h1>Customer Survey</h1>
+  <div id="survey-text">
+
+    <p class="info-text">Thank you for taking our customer survey. Your response helps Red Ball Pizza maintain the tradition that has made us the top-rated pizzeria in the metro area. All participants are automatically entered into a monthly drawing to receive a <i>Red Ball Express PizzaFest</i> containing two large pizzas, a 2-liter soda, and a side order of chicken wings. Check your e-mail inbox for contest results.</p>
+    <p class="info-text">Surveys are private and confidential. Red Ball Pizza will not share your contact information with third parties, ever.</p>
+    <p class="info-text">Required values are marked by an asterisk (*)</p>
+  </div>
+  <div class="customerInfo" id="info-box-left">
+    <p id="customer-information-label">Customer Information</p>
+    <form>
+      <div class="line-info">
+        <label for="name-input">Name*</label>
+        <input type="text" placeholder="first and last name" id="name-input" />
+      </div>
+
+      <div class="line-info"><label for="address">Street Address</label><input type="text" id="address" /></div>
+
+      <div class="line-info"><label for="city-input">City</label><input type="text" id="city-input" value="Ormond Beach" /></div>
+
+      <div class="line-info"><label for="state-input">State</label><input type="text" id="state-input" value="FL" /></div>
+
+      <div class="line-info"><label for="zipcode-input">Postal Code</label><input type="text" id="zipcode-input" placeholder="#####" /></div>
+
+      <div class="line-info"><label for="number-input"> Phone Number</label><input type="text" placeholder="(###) ###-####" id="phone-input" /></div>
+
+      <div class="line-info"><label for="email-input">Email*</label><input id="email-input" type="text" /></div>
+
+      <div id="referral-div">
+        <label for="referral-source">Where did you hear about us? (select all that apply)</label>
+        <select id="referral-source" size="5">
+          <option value="internet">Internet</option>
+          <option value="magazine">Magazine</option>
+          <option value="newspaper">Newspaper</option>
+          <option value="word-of-mouth">Word of Mouth</option>
+          <option value="other">Other</option>
+
+        </select>
+      </div>
+
+      <div class="line-info"><label for="dish-input">What's your favorite dish?</label><input type="text" id="dish-input" /></div>
+      <div class="line-info"><label for="dine-out-count">How many times do you dine out per month?</label><input type="number" id="dine-out-count" min="0" value="0"></div>
+      </br>
+      <div class="line-info"><input type="checkbox" id="email-list-check">
+        <label for="email-list-check" id="email-list"> Add me to your mailing list for great coupons and specials!</label>
+      </div>
+    </form>
+
+  </div>
+  <div class="customerInfo" id="info-box-right">
+    <p id="customer-experience-label">Share Your Experience at Red Ball Pizza</p>
+    <form>
+      <div class="line-info"><label for="visit-date-input">Date of Visit</label><input type="date" id="visit-date-input" /></div>
+
+      <div class="line-info"><label for="order-type-input">Order Type</label>
+        <select>
+          <option value="carry-out">Carry Out</option>
+          <option value="delivery">Delivery</option>
+          <option value="dine-in">Dine In</option>
+          <option value="bake">Take 'n Bake</option>
+
+        </select>
+      </div>
+
+      <div class="radio-div"><label for="service" class="radio-label">Was your service friendly?</label>
+        <div class="yes-no-border">
+          <label for="service-yes" class="radio-label">Yes</label>
+          <input type="radio" id="service-yes" name="service" class="radio-input" />
+          <label for="service-no" class="radio-label">No</label>
+          <input type="radio" id="service-no" name="service" class="radio-input">
+        </div>
+      </div>
+
+      <div class="radio-div"><label for="order-correct" class="radio-label">Was your order correct?</label>
+        <div class="yes-no-border">
+          <label for="correct-yes" class="radio-label">Yes</label>
+          <input type="radio" id="correct-yes" name="correct" class="radio-input" />
+          <label for="correct-no" class="radio-label">No</label>
+          <input type="radio" id="correct-no" name="correct" class="radio-input">
+        </div>
+      </div>
+
+      <div class="radio-div"><label for="food-hot" class="radio-label">Was your food hot?</label>
+        <div class="yes-no-border">
+          <label for="hot-yes" class="radio-label">Yes</label>
+          <input type="radio" id="hot-yes" name="food-temp" class="radio-input" />
+          <label for="hot-no" class="radio-label">No</label>
+          <input type="radio" id="hot-no" name="food-temp" class="radio-input">
+        </div>
+      </div>
+
+      <div class="line-info"><label for="rate-service">Rate the overall service (0 = poor, 10 = great)</label><input type="range" id="rate-service" min="0" max="10" value="5" /></div>
+
+      <div class="line-info">
+        <p id="exp-answer">Tell us more about your experience</p><textarea rows="7" cols="40"></textarea>
+      </div>
+    </form>
+
+  </div>
+
+  <div id="buttons-container">
+
+    <input type="submit" value="Cancel" class="submit-buttons" />
+    <input type="submit" value="Submit My Survey" class="submit-buttons" />
+  </div>
+</div> 
+<footer></footer>
+
+
+    <script>const bannerLogo = document.getElementById("banner-logo");
+const customerInfoForm = document.getElementById("customer-information");
+
+let hamburgerSrc =
+  "https://drive.google.com/uc?id=1CnkfA7eH9vAEcuHo-eSbTh0QQdnpIcQb";
+// let redX = "https://drive.google.com/uc?id=1DhvGl41dsjs4X2VE4skPXMj6tRzDVHOB";
+let greenCheck =
+  "https://drive.google.com/uc?id=1LDcwQ0vWPkphHPOMDOzOZ8ei3P5hEunv";
+let bannerSrc =
+  "https://drive.google.com/uc?id=1XVrJasLndnCWu2aB1AbxBrHP4CxtZ7YP";
+let checkerBoard =
+  "https://drive.google.com/uc?id=1xTkMkhjX350bTk1q0hZXm6RwQKKK0j4T";
+
+document.body.style.backgroundImage = `url(${checkerBoard})`;
+// testImage.src = redX;
+bannerLogo.src = bannerSrc;
+
+customerInfoForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+});
+</script>
+</body>
+</html>
